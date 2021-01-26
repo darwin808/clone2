@@ -1,0 +1,71 @@
+$color1:rgb(248, 247, 245);
+$font-color2 :#4c4c4b;
+
+.navbar2.active {
+    background-color: $color1;
+    top: 0;
+    color: gray;
+}
+
+.navbar2 {
+    position: fixed;
+    top: 5vh;
+    left: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    height: 5vh;
+    width: 100%;
+    background-color: none;
+    color: white;
+
+    .centernav {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        font-size: 18px;
+        letter-spacing: 8px;
+        font-weight: 600;
+
+
+
+    }
+
+
+    .leftnav {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+
+        .leftitems {
+            margin-right: 1rem;
+            font-size: 13px;
+                cursor: pointer;
+        }
+
+    }
+
+    .rightnav {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+
+        .rightitems {
+            margin-right: 1rem;
+            font-size: 13px;
+            cursor: pointer;
+
+        }
+
+    }
+
+
+
+
+}
