@@ -1,0 +1,143 @@
+.AboutTab {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+    position: absolute;
+    top: 5vh;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 3rem 3rem;
+    white-space: nowrap;
+
+
+    p:hover {
+        color: black;
+    }
+
+    p {
+        cursor: pointer;
+    }
+
+
+    .Featured {
+
+
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        color: grey;
+
+        #aboutPic1 {
+            height: 100%;
+            width: 100%;
+
+        }
+
+        #aboutPic1:hover {
+            filter: brightness(120%);
+        }
+
+        #sale {
+            color: red;
+        }
+
+        .FeatureHead {
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+
+        .Fetured-items {
+            margin-bottom: 1rem;
+        }
+    }
+
+
+
+
+    .Apparel {
+
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        color: grey;
+
+        #aboutPic2 {
+            height: 100%;
+            width: 100%;
+        }
+
+        #aboutPic2:hover {
+            filter: brightness(120%);
+        }
+
+
+        .ApparelHead {
+            margin-bottom: 1rem;
+            font-weight: 600;
+
+        }
+
+
+        .Apparel-items {
+            margin-bottom: 1rem;
+        }
+
+    }
+
+
+    .ShoesAccessories {
+        color: grey;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+
+        .ShoeAccHead {
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        #aboutPic3 {
+            height: 100%;
+            width: 100%;
+        }
+
+        #aboutPic3:hover {
+            filter: brightness(120%);
+        }
+
+
+
+        .ShoeAcc-items {
+
+            margin-bottom: 1rem;
+        }
+
+    }
+
+    .Trendingthisweek {
+        color: grey;
+        display: flex;
+        flex-direction: column;
+
+        text-align: left;
+
+        .TrendHead {
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        #aboutPic4 {
+            height: 100%;
+            width: 100%;
+        }
+
+        #aboutPic4:hover {
+            filter: brightness(120%);
+        }
+
+
+
+    }
+}

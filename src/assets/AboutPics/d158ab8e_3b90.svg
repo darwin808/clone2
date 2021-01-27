@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Duties</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Duties" stroke="#949494" stroke-width="2">
+            <g id="Page-1" transform="translate(19.000000, 11.000000)">
+                <polyline id="Stroke-1" points="44 29.7392586 44 57 37.4815932 53.0689655 32.3115102 57 27.1414273 53.0689655 21.9723498 57 16.8022669 53.0689655 11.6331894 57 6.46310642 53.0689655 0 57 0 29.7392586 0 0 6.46310642 3.93103448 11.6331894 0 16.8022669 3.93103448 22.033683 0.0265344828 27.1414273 3.93103448 32.3115102 0 37.4815932 3.93103448 44 0 44 29.7392586"></polyline>
+                <path d="M22.499,29 C20.014,29 18,26.985 18,24.5 C18,22.015 20.014,20 22.499,20 L27,20" id="Stroke-3"></path>
+                <path d="M22.499,29 C24.984,29 27,31.015 27,33.5 C27,35.985 24.984,38 22.499,38 L18,38" id="Stroke-5"></path>
+                <path d="M22.001,17 L22,20" id="Stroke-7"></path>
+                <path d="M22,38 L22.001,41" id="Stroke-9"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,106 @@
+.MenTab {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+    position: absolute;
+    top: 5vh;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 3rem 3rem;
+    white-space: nowrap;
+
+
+    p:hover {
+        color: black;
+    }
+
+    p {
+        cursor: pointer;
+    }
+
+
+    .Featured {
+
+
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        color: grey;
+
+
+        #sale {
+            color: red;
+        }
+
+        .FeatureHead {
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+
+        .Fetured-items {
+            margin-bottom: 1rem;
+        }
+    }
+
+
+
+
+    .Apparel {
+
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        color: grey;
+
+        .ApparelHead {
+            margin-bottom: 1rem;
+            font-weight: 600;
+
+        }
+
+
+        .Apparel-items {
+            margin-bottom: 1rem;
+        }
+
+    }
+
+
+    .ShoesAccessories {
+        color: grey;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+
+        .ShoeAccHead {
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .ShoeAcc-items {
+
+            margin-bottom: 1rem;
+        }
+
+    }
+
+    .Trendingthisweek {
+        color: grey;
+        display: flex;
+        flex-direction: column;
+
+        text-align: left;
+
+        .TrendHead {
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .Trend-items {
+            margin-bottom: 1rem;
+            color: goldenrod;
+        }
+    }
+}
