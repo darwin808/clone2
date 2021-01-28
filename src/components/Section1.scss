@@ -1,0 +1,17 @@
+#s1card-img {
+    height: 50%;
+    width: 100%;
+}
+
+
+.section1 {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    padding: 2rem 2rem;
+    width: 100%;
+
+    .section1-Card1 {}
+
+}
