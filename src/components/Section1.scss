@@ -6,12 +6,12 @@
 
 .section1 {
     display: grid;
-    height: 100vh;
+    height: 80vh;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
-    padding: 2rem 2rem;
+    padding: 0 5rem;
     width: 100%;
+    border-bottom: 1px solid grey;
 
-    .section1-Card1 {}
 
 }

@@ -1,0 +1,25 @@
+.Section2_Card {
+    display: flex;
+    flex-direction: column;
+
+    img {
+        height: 100%;
+        width: 100%;
+    }
+
+    p {
+        text-align: left;
+        margin: 1rem 0;
+        font-size: 17px;
+        line-height: 21px;
+        letter-spacing: 1.3px;
+
+    }
+
+    .Section2-foo {
+        color: grey;
+    }
+
+
+
+}

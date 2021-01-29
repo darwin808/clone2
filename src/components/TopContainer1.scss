@@ -1,7 +1,7 @@
 $font-topcontainer: 'Bodoni Moda',
 serif;
 
-button{
+button {
     cursor: pointer;
 }
 
@@ -12,7 +12,7 @@ button{
     height: 80vh;
     display: flex;
     flex-direction: column;
-    
+
 
     .topContainerBG {
         height: 100%;
@@ -48,6 +48,7 @@ button{
             height: 2.7rem;
             border: none;
             color: rgb(58, 55, 55);
+            z-index: 1;
 
         }
 
