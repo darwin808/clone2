@@ -1,0 +1,40 @@
+.Section3 {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(241, 232, 223);
+    position: relative;
+    justify-content: center;
+    z-index: 0;
+
+    i {
+
+        font-weight: 100;
+        cursor: pointer;
+        position: absolute;
+    }
+
+    .fa-angle-left {
+        top: 50%;
+        left: 2%;
+    }
+
+    .fa-angle-right {
+        top: 50%;
+        left: 5%;
+    }
+
+
+    .S3MainHeader {
+        font-size: 14px;
+        margin-top: 4rem;
+        margin-left: 3rem;
+        letter-spacing: 2px;
+
+
+
+
+    }
+
+}

@@ -1,0 +1,50 @@
+.Section3Slider {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem 3rem;
+    background-color: rgb(241, 232, 223);
+
+    .Section3Left {
+        display: flex;
+        flex-direction: column;
+
+        .S3TopLeft {
+            flex: 50%;
+
+            p {
+                margin-bottom: 1rem;
+            }
+
+            h1 {
+                font-size: 23px;
+                font-weight: 400;
+                color: black;
+                margin-bottom: 1rem;
+            }
+
+            #s3LeftBody {
+                color: grey;
+                font-size: 16px;
+            }
+
+        }
+
+        .empty {
+            flex: 50%;
+        }
+
+    }
+
+    .Section3Right {
+        img {
+            height: 100%;
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+    }
+
+
+
+
+}

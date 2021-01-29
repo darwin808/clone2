@@ -1,0 +1,14 @@
+.Section4 {
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 5rem;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+
+    .s4Body {
+        display: flex;
+        flex-direction: row;
+    }
+}
