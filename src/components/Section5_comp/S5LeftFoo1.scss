@@ -1,0 +1,19 @@
+.S5LeftFoo1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    color: gray;
+    font-size: 13px;
+    text-align: left;
+    justify-content: center;
+
+    h1 {
+        color: black;
+        margin-bottom: 1.5rem;
+        font-size: 13px;
+    }
+
+    li {
+        margin-bottom: 1rem;
+        list-style: none;
+    }
+}

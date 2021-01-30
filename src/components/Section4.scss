@@ -7,8 +7,17 @@
     width: 100%;
     text-align: center;
 
+    h1 {
+        margin-top: 5rem;
+    }
+
+
     .s4Body {
         display: flex;
         flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
     }
 }

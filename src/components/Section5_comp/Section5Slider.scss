@@ -1,0 +1,18 @@
+.Section5Slider {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    padding: 5rem 5rem;
+
+    img {
+        height: 100%;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    h2 {
+        font-size: 13px;
+        font-weight: 400;
+    }
+}
