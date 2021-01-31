@@ -14,7 +14,7 @@ function S5LeftFoo1() {
       </ul>
 
       <ul className="col2">
-        <h1 className="header"></h1>
+        <h1 className="header">Company</h1>
         <li>About</li>
         <li>Factories</li>
         <li>Careers</li>
@@ -32,7 +32,7 @@ function S5LeftFoo1() {
       </ul>
 
       <ul className="col4">
-        <h1>Visit Us</h1>
+        <h1 className="header">Visit Us</h1>
         <li>Find a location nearest you. See Our Stores</li>
       </ul>
     </div>

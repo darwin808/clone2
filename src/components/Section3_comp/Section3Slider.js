@@ -5,7 +5,7 @@ function Section3Slider({ header, body, s3img, s3rightP }) {
     <div className="Section3Slider">
       <div className="Section3Left">
         <div className="S3TopLeft">
-          <p>★★★★☆</p>
+          <p id="stars">★★★★☆</p>
           <h1>"{header}"</h1>
           <p id="s3LeftBody">{body}</p>
         </div>

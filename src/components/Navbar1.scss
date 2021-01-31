@@ -1,60 +1,293 @@
 $nav1-font-color: white;
 
+@mixin LargeScreen {
 
-.navbar1 {
-    width: auto;
-    height: 5vh;
-    background-color: black;
-    color: $nav1-font-color;
-    z-index: 99;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    font-size: 13px;
-    gap: 1rem;
 
-    .nav1-center {
-        grid-column: 3/5;
+
+    .navbar1 {
+        width: auto;
         height: 5vh;
-        display: flex;
-        text-align: center;
-        align-items: center;
+        background-color: black;
+        color: $nav1-font-color;
+        z-index: 99;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        font-size: 13px;
+        gap: 1rem;
 
-        justify-content: center;
+        .nav1-center {
+            grid-column: 3/5;
+            height: 5vh;
+            display: flex;
+            text-align: center;
+            align-items: center;
 
-
-    }
-
-    .nav1-para3:hover {
-        color: rgb(134, 126, 126);
-    }
-
-
-    .nav1-para3 {
-        grid-column: 5/6;
-        text-align: center;
-        align-items: center;
-
-        justify-content: center;
-        height: 5vh;
-        display: flex;
-        cursor: pointer;
-        text-decoration: underline;
-    }
-
-    .nav1-right {
-        grid-column: 6/7;
-        text-align: center;
-        align-items: center;
-
-        justify-content: center;
-        height: 5vh;
-        display: flex;
-        flex-direction: row;
+            justify-content: center;
 
 
+        }
 
-        #svgPh {
-            margin-right: 5px;
+        .nav1-para3:hover {
+            color: rgb(134, 126, 126);
+        }
+
+
+        .nav1-para3 {
+            grid-column: 5/6;
+            text-align: center;
+            align-items: center;
+
+            justify-content: center;
+            height: 5vh;
+            display: flex;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .nav1-right {
+            grid-column: 6/7;
+            text-align: center;
+            align-items: center;
+
+            justify-content: center;
+            height: 5vh;
+            display: flex;
+            flex-direction: row;
+
+
+
+            #svgPh {
+                margin-right: 5px;
+            }
         }
     }
+
+}
+
+
+@mixin MediumScreen {
+
+
+
+    .navbar1 {
+        width: auto;
+        height: 5vh;
+        background-color: black;
+        color: $nav1-font-color;
+        z-index: 99;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        font-size: 13px;
+        gap: 1rem;
+
+        .nav1-center {
+            grid-column: 3/5;
+            height: 5vh;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            font-size: 11px;
+            justify-content: center;
+
+
+        }
+
+        .nav1-para3:hover {
+            color: rgb(134, 126, 126);
+        }
+
+
+        .nav1-para3 {
+            grid-column: 5/6;
+            text-align: center;
+            align-items: center;
+            font-size: 11px;
+            justify-content: center;
+            height: 5vh;
+            display: flex;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .nav1-right {
+            grid-column: 6/7;
+            text-align: center;
+            align-items: center;
+
+            justify-content: center;
+            height: 5vh;
+            display: flex;
+            flex-direction: row;
+
+            p {
+                font-size: 11px;
+            }
+
+
+            #svgPh {
+                margin-right: 5px;
+            }
+        }
+    }
+
+}
+
+@mixin SmallScreen {
+
+
+
+    .navbar1 {
+        width: auto;
+        height: 5vh;
+        background-color: black;
+        color: $nav1-font-color;
+        z-index: 99;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        font-size: 11px;
+        gap: 1rem;
+
+        .nav1-center {
+            grid-column: 1/4;
+            height: 5vh;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            font-size: 11px;
+            justify-content: center;
+
+
+        }
+
+        .nav1-para3:hover {
+            color: rgb(134, 126, 126);
+        }
+
+
+        .nav1-para3 {
+            grid-column: 4/6;
+            text-align: center;
+            align-items: center;
+            font-size: 11px;
+            justify-content: center;
+            height: 5vh;
+            display: flex;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .nav1-right {
+            grid-column: 6/7;
+            text-align: center;
+            align-items: center;
+
+            justify-content: center;
+            height: 5vh;
+            display: flex;
+            flex-direction: row;
+
+            p {
+                font-size: 11px;
+            }
+
+
+            #svgPh {
+                margin-right: 5px;
+            }
+        }
+    }
+
+}
+
+@mixin ExtraSmallScreen {
+
+
+
+    .navbar1 {
+        width: auto;
+        height: 5vh;
+        background-color: black;
+        color: $nav1-font-color;
+        z-index: 99;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        font-size: 11px;
+        gap: 1rem;
+
+        .nav1-center {
+            grid-column: 1/4;
+            height: 5vh;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            font-size: 9px;
+            justify-content: center;
+
+
+        }
+
+        .nav1-para3:hover {
+            color: rgb(134, 126, 126);
+        }
+
+
+        .nav1-para3 {
+            grid-column: 4/6;
+            text-align: center;
+            align-items: center;
+            font-size: 9px;
+            justify-content: center;
+            height: 5vh;
+            display: flex;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .nav1-right {
+            grid-column: 6/7;
+            text-align: center;
+            align-items: center;
+
+            justify-content: center;
+            height: 5vh;
+            display: flex;
+            flex-direction: row;
+
+            p {
+                font-size: 9px;
+            }
+
+
+            #svgPh {
+                margin-right: 5px;
+            }
+        }
+    }
+
+}
+
+@media (min-width:120px) and (max-width:480px) {
+
+    /* smartphones, iPhone, portrait 480x320 phones */
+    @include ExtraSmallScreen()
+}
+
+@media (min-width:481px) and (max-width:640px) {
+
+    /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+    @include ExtraSmallScreen()
+}
+
+@media (min-width:641px) and (max-width:960px) {
+    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+    @include SmallScreen()
+}
+
+@media (min-width:961px) and (max-width:1640px) {
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+    @include MediumScreen()
+}
+
+@media(min-width:1641px) and (max-width:2600px) {
+    @include LargeScreen()
 }

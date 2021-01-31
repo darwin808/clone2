@@ -15,6 +15,7 @@ import s5img11 from "../assets/s5img11.jpg";
 import s5img12 from "../assets/s5img12.jpg";
 import S5LeftFoo1 from "./Section5_comp/S5LeftFoo1";
 import S5RightFoo1 from "./Section5_comp/S5RightFoo1";
+import S5Foo2 from "./Section5_comp/S5Foo2";
 
 function Section5() {
   const [counter, setcounter] = useState(0);
@@ -81,7 +82,6 @@ function Section5() {
         <S5LeftFoo1 />
         <S5RightFoo1 />
       </div>
-      <div className="S5Foo2">xx</div>
     </div>
   );
 }

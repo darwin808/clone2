@@ -1,61 +1,307 @@
-.Section5 {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    background-color: white;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    position: relative;
-    padding: 0 5rem;
-
-
-    h1 {
-        font-size: 38px;
-        font-weight: 400;
-    }
-
-    .S5Slider {
-        height: 40vh;
-
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        gap: 1rem;
-        margin-bottom: 3rem;
-        border-bottom: 1px solid grey;
-
-        .fa-angle-left {
-            position: absolute;
-            top: 35%;
-        }
-
-        .fas.fa-angle-right {
-            position: absolute;
-            top: 35%;
-            left: 60%;
-        }
-
-    }
+@mixin LargeScreen {
 
 
 
-    .S5Foo1 {
-        margin-top: 3rem;
+    .Section5 {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+        height: 90vh;
+        background-color: white;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        position: relative;
+        padding-top: 2rem;
+
+
+
+
+        h1 {
+
+            font-size: 38px;
+            font-weight: 400;
+        }
+
+        .S5Slider {
+
+
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 1rem;
+
+
+
+
+            padding: 1rem 2rem;
+
+            .fa-angle-left {
+                position: absolute;
+                top: 35%;
+                left: 1rem;
+            }
+
+            .fas.fa-angle-right {
+                position: absolute;
+                top: 35%;
+
+                right: 1rem;
+            }
+
+        }
+
+
+
+        .S5Foo1 {
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            padding: 1rem 5rem;
+        }
+
+
+
+
     }
 
-    .S5Foo2 {}
+}
+
+@mixin MediumScreen {
+
+
+
+    .Section5 {
+        display: flex;
+        flex-direction: column;
+        height: 90vh;
+        background-color: white;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        position: relative;
+        padding-top: 2rem;
+
+
+
+
+        h1 {
+
+            font-size: 26px;
+            font-weight: 400;
+        }
+
+        .S5Slider {
+
+
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 1rem;
+
+
+
+
+            padding: 1rem 2rem;
+
+            .fa-angle-left {
+                position: absolute;
+                top: 35%;
+                left: 1rem;
+            }
+
+            .fas.fa-angle-right {
+                position: absolute;
+                top: 35%;
+
+                right: 1rem;
+            }
+
+        }
+
+
+
+        .S5Foo1 {
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            padding: 1rem 3rem;
+        }
+
+
+
+
+    }
+
+}
+
+
+
+@mixin SmallScreen {
+
+
+
+    .Section5 {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        background-color: white;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        position: relative;
 
 
 
 
 
+        h1 {
+
+            font-size: 20px;
+            font-weight: 400;
+            margin-bottom: 1rem;
+        }
+
+        .S5Slider {
+
+
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 1rem;
+            padding: 0 1rem;
+
+            .fa-angle-left {
+                position: absolute;
+                top: 20%;
+                left: .5rem;
+                font-size: 30px;
+                font-weight: 400;
+            }
+
+            .fas.fa-angle-right {
+                position: absolute;
+                top: 20%;
+                font-size: 30px;
+                font-weight: 400;
+                right: .5rem;
+            }
+
+        }
+
+
+
+        .S5Foo1 {
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            padding: 1rem 1rem;
+        }
+
+
+
+
+    }
+
+}
+
+
+
+@mixin ExtraSmallScreen {
+
+
+
+    .Section5 {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        background-color: white;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        position: relative;
 
 
 
 
 
+        h1 {
+            display: none;
+            font-size: 20px;
+            font-weight: 400;
+            margin-bottom: 1rem;
+        }
+
+        .S5Slider {
 
 
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 1rem;
+            padding: 0 1rem;
+
+            .fa-angle-left {
+                display: none;
+                position: absolute;
+                top: 20%;
+                left: .5rem;
+                font-size: 30px;
+                font-weight: 400;
+            }
+
+            .fas.fa-angle-right {
+                display: none;
+                position: absolute;
+                top: 20%;
+                font-size: 30px;
+                font-weight: 400;
+                right: .5rem;
+            }
+
+        }
+
+
+
+        .S5Foo1 {
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            padding: 1rem 1rem;
+        }
+
+
+
+
+    }
+
+}
+
+
+
+@media (min-width:120px) and (max-width:480px) {
+
+    /* smartphones, iPhone, portrait 480x320 phones */
+    @include ExtraSmallScreen()
+}
+
+@media (min-width:481px) and (max-width:640px) {
+
+    /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+    @include ExtraSmallScreen()
+}
+
+@media (min-width:641px) and (max-width:960px) {
+    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+    @include SmallScreen()
+}
+
+@media (min-width:961px) and (max-width:1640px) {
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+    @include MediumScreen()
+}
+
+@media(min-width:1641px) and (max-width:2600px) {
+    @include LargeScreen()
 }

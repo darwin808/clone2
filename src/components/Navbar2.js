@@ -28,12 +28,24 @@ function useScroll() {
   return scroller;
 }
 
+function useWindow() {
+  const [size, setsize] = useState([window.innerWidth, window.innerHeight]);
+  useEffect(() => {
+    const handleresize = () => {
+      setsize([window.innerWidth, window.innerHeight]);
+    };
+    window.addEventListener("resize", handleresize);
+  }, []);
+  return size;
+}
+
 function Navbar2() {
   const ShowManTab = useSelector((e) => e.MenReducer);
   const ShowWomanTab = useSelector((e) => e.WomenReducer);
   const ShowDenimTab = useSelector((e) => e.DenimReducer);
   const ShowAboutTab = useSelector((e) => e.AboutReducer);
   const dispatch = useDispatch();
+  const [width, height] = useWindow();
   const [scrollerX, scrollerY] = useScroll();
   const [scrolly, setScrolly] = useState("");
   const [setter, setsetter] = useState(true);
@@ -44,7 +56,7 @@ function Navbar2() {
   const changebg = useMemo(() => {
     setScrolly(window.scrollY);
     // console.log(scrollerY);
-    scrollerY >= 50 ? setscrolldown(true) : setscrolldown(false);
+    scrollerY >= 30 ? setscrolldown(true) : setscrolldown(false);
   }, [scrollerY]);
   window.addEventListener("scroll", changebg);
 
@@ -102,7 +114,7 @@ function Navbar2() {
           About {ShowAboutTab && <AboutTab />}{" "}
         </p>
       </div>
-      <div className="centernav">EVERLANE</div>
+      <div className="centernav">EVERLANE{width}</div>
       <div className="rightnav">
         <div className="rightitems">Seach</div>
         <div className="rightitems">Log In</div>

@@ -6,6 +6,7 @@ $font-color2 :#4c4c4b;
     top: 0;
     color: gray;
     z-index: 99;
+    box-shadow: 0px 15px 10px -15px rgb(94, 92, 92);
 
 
 }
@@ -94,5 +95,29 @@ $font-color2 :#4c4c4b;
 
 
 
+
+}
+
+
+
+
+@media (min-width:120px) and (max-width:480px) {
+
+    /* smartphones, iPhone, portrait 480x320 phones */
+
+}
+
+@media (min-width:481px) and (max-width:640px) {
+
+    /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+
+}
+
+@media (min-width:641px) and (max-width:960px) {
+    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+}
+
+@media (min-width:961px) and (max-width:1500px) {
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
 
 }

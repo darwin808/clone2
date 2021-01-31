@@ -1,19 +1,143 @@
-.S5LeftFoo1 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    color: gray;
-    font-size: 13px;
-    text-align: left;
-    justify-content: center;
+@mixin LargeScreen {
 
-    h1 {
-        color: black;
-        margin-bottom: 1.5rem;
+
+    .S5LeftFoo1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        color: gray;
         font-size: 13px;
+        text-align: left;
+        justify-content: center;
+
+        padding: 2rem 5rem;
+
+
+        h1 {
+            color: black;
+            margin-bottom: 1.5rem;
+            font-size: 13px;
+        }
+
+        li {
+            margin-bottom: 1rem;
+            list-style: none;
+        }
     }
 
-    li {
-        margin-bottom: 1rem;
-        list-style: none;
+}
+
+@mixin MediumScreen {
+
+
+    .S5LeftFoo1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        color: gray;
+        font-size: 10px;
+        text-align: left;
+        justify-content: center;
+        gap: 1rem;
+
+        padding: 1rem 1rem;
+
+
+        h1 {
+            color: black;
+            margin-bottom: 1rem;
+            font-size: 10px;
+        }
+
+        li {
+            margin-bottom: 1rem;
+            list-style: none;
+        }
     }
+
+}
+
+@mixin SmallScreen {
+
+
+    .S5LeftFoo1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        color: gray;
+        font-size: 10px;
+        text-align: left;
+        justify-content: center;
+        gap: 1rem;
+
+        padding: 1rem 1rem;
+
+
+        h1 {
+            color: black;
+            margin-bottom: 1rem;
+            font-size: 10px;
+        }
+
+        li {
+            margin-bottom: 1rem;
+            list-style: none;
+        }
+    }
+
+}
+
+@mixin ExtraSmallScreen {
+
+
+    .S5LeftFoo1 {
+        display: none;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        color: gray;
+        font-size: 10px;
+        text-align: left;
+        justify-content: center;
+        gap: 1rem;
+
+        padding: 1rem 1rem;
+
+
+        h1 {
+            color: black;
+            margin-bottom: 1rem;
+            font-size: 10px;
+        }
+
+        li {
+            margin-bottom: 1rem;
+            list-style: none;
+        }
+    }
+
+}
+
+
+
+
+@media (min-width:120px) and (max-width:480px) {
+
+    /* smartphones, iPhone, portrait 480x320 phones */
+    @include ExtraSmallScreen()
+}
+
+@media (min-width:481px) and (max-width:640px) {
+
+    /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+    @include ExtraSmallScreen()
+}
+
+@media (min-width:641px) and (max-width:960px) {
+    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+    @include SmallScreen()
+}
+
+@media (min-width:961px) and (max-width:1640px) {
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+    @include MediumScreen()
+}
+
+@media(min-width:1641px) and (max-width:2600px) {
+    @include LargeScreen()
 }

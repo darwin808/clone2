@@ -1,0 +1,166 @@
+@mixin LargeScreen {
+
+
+
+    .S5Foo2 {
+        color: grey;
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        width: 100%;
+        text-align: left;
+        padding: 1rem 8.5rem;
+        background-color: rgb(247, 247, 248);
+
+
+        div {
+            border-right: 1px solid rgb(95, 94, 94);
+            font-size: 13px;
+            margin-left: 1rem;
+            padding-right: 1rem;
+
+
+        }
+
+
+
+    }
+
+}
+
+@mixin MediumScreen {
+
+
+
+    .S5Foo2 {
+        color: grey;
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        width: 100%;
+        text-align: left;
+        padding: 1rem 2rem;
+        background-color: rgb(247, 247, 248);
+
+
+        div {
+            border-right: 1px solid rgb(95, 94, 94);
+            font-size: 8px;
+            margin-left: 1rem;
+            padding-right: 1rem;
+
+
+        }
+
+
+
+    }
+
+}
+
+@mixin SmallScreen {
+
+
+
+    .S5Foo2 {
+        color: grey;
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        width: 100%;
+        text-align: left;
+        padding: 1rem 1rem;
+        background-color: rgb(247, 247, 248);
+
+
+        div {
+            border-right: 1px solid rgb(95, 94, 94);
+            font-size: 8px;
+            margin-left: .2rem;
+            padding-right: .3rem;
+
+
+        }
+
+
+
+    }
+
+}
+
+@mixin ExtraSmallScreen {
+
+
+
+    .S5Foo2 {
+        color: grey;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        width: 100%;
+        padding: 1rem 1rem;
+        background-color: rgb(247, 247, 248);
+
+
+        #foo {
+            display: flex;
+
+            border: none;
+
+
+
+
+        }
+
+        div {
+            display: none;
+
+            border-right: 1px solid rgb(95, 94, 94);
+            font-size: 8px;
+            margin-left: .2rem;
+            padding-right: .3rem;
+
+
+        }
+
+
+
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+@media (min-width:120px) and (max-width:480px) {
+
+    /* smartphones, iPhone, portrait 480x320 phones */
+    @include ExtraSmallScreen()
+}
+
+@media (min-width:481px) and (max-width:640px) {
+
+    /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+    @include ExtraSmallScreen()
+}
+
+@media (min-width:641px) and (max-width:960px) {
+    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+    @include SmallScreen()
+}
+
+@media (min-width:961px) and (max-width:1640px) {
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+    @include MediumScreen()
+}
+
+@media(min-width:1641px) and (max-width:2600px) {
+    @include LargeScreen()
+}

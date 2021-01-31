@@ -1,17 +1,150 @@
-.S5RightFoo1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: left;
-    padding: 5rem 5rem;
+@mixin LargeScreen {
 
-    h2 {
-        color: rgb(44, 44, 44);
-        margin-bottom: 2rem;
-        font-size: 14px;
+
+    .S5RightFoo1 {
+        display: flex;
+        flex-direction: column;
+
+        text-align: left;
+        padding: 2rem 5rem;
+
+        h2 {
+            color: rgb(92, 91, 91);
+            margin-bottom: 2rem;
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        input {
+
+            border-width: 0px;
+            outline: none;
+            border-bottom: 1px solid rgb(135, 127, 127);
+            height: 2rem;
+        }
+
+
     }
 
-    input {}
+}
+
+@mixin MediumScreen {
 
 
+    .S5RightFoo1 {
+        display: flex;
+        flex-direction: column;
+
+        text-align: left;
+        padding: 1rem 1rem;
+
+        h2 {
+            color: rgb(92, 91, 91);
+            margin-bottom: 1rem;
+            font-size: 10px;
+            font-weight: 400;
+        }
+
+        input {
+
+            border-width: 0px;
+            outline: none;
+            border-bottom: 1px solid rgb(135, 127, 127);
+            height: 2rem;
+        }
+
+
+    }
+
+}
+
+@mixin SmallScreen {
+
+
+    .S5RightFoo1 {
+        display: flex;
+        flex-direction: column;
+
+        text-align: left;
+        padding: 1rem 1rem;
+
+        h2 {
+            color: rgb(92, 91, 91);
+            margin-bottom: 1rem;
+            font-size: 10px;
+            font-weight: 400;
+        }
+
+        input {
+
+            border-width: 0px;
+            outline: none;
+            border-bottom: 1px solid rgb(135, 127, 127);
+            height: 2rem;
+
+        }
+
+
+    }
+
+}
+
+
+@mixin ExtraSmallScreen {
+
+
+    .S5RightFoo1 {
+        display: flex;
+        flex-direction: column;
+
+        text-align: left;
+        padding: 1rem 1rem;
+
+        h2 {
+            color: rgb(92, 91, 91);
+            margin-bottom: 1rem;
+            font-size: 10px;
+            font-weight: 400;
+        }
+
+        input {
+
+            border-width: 0px;
+            outline: none;
+            border-bottom: 1px solid rgb(135, 127, 127);
+            height: 2rem;
+            margin: 0 5rem;
+        }
+
+
+    }
+
+}
+
+
+
+@media (min-width:120px) and (max-width:480px) {
+
+    /* smartphones, iPhone, portrait 480x320 phones */
+    @include ExtraSmallScreen()
+}
+
+@media (min-width:481px) and (max-width:640px) {
+
+    /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+    @include ExtraSmallScreen()
+}
+
+@media (min-width:641px) and (max-width:960px) {
+    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+    @include SmallScreen()
+}
+
+@media (min-width:961px) and (max-width:1640px) {
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+    @include MediumScreen()
+}
+
+@media(min-width:1641px) and (max-width:2600px) {
+    @include LargeScreen()
 }
