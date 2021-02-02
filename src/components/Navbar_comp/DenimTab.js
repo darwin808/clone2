@@ -4,9 +4,11 @@ import { useDispatch } from "react-redux";
 import { falseDenim } from "../../Actions/Actions";
 import denim1 from "../../assets/denim1.jpg";
 import denim2 from "../../assets/denim2.jpg";
+import { useHistory } from "react-router-dom";
 
 function DenimTab() {
   const dispatch = useDispatch();
+  const history = useHistory();
   return (
     <div
       className="DenimTab"
@@ -26,7 +28,9 @@ function DenimTab() {
       </div>
       <div className="Apparel">
         <h4 className="ApparelHead">Men</h4>
-        <p className="Apparel-items">Slim</p>
+        <p className="Apparel-items" onClick={() => history.push("/men/denim")}>
+          Slim
+        </p>
         <p className="Apparel-items">Straight</p>
         <p className="Apparel-items">Athletic</p>
         <p className="Apparel-items">Jacket</p>

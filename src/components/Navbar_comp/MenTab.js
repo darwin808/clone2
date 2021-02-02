@@ -2,9 +2,11 @@ import React from "react";
 import "./MenTab.scss";
 import { useDispatch } from "react-redux";
 import { falseMen } from "../../Actions/Actions";
+import { Link, useHistory } from "react-router-dom";
 
 function MenTab() {
   const dispatch = useDispatch();
+  const history = useHistory();
   return (
     <div
       className="MenTab"
@@ -28,7 +30,9 @@ function MenTab() {
         <h4 className="ApparelHead">Apparel</h4>
         <p className="Apparel-items">Sweaters</p>
         <p className="Apparel-items">Sweatshirts & Sweatpants</p>
-        <p className="Apparel-items">Denim</p>
+        <p className="Apparel-items">
+          <Link to="/men">Denim</Link>
+        </p>
         <p className="Apparel-items">Bottoms</p>
         <p className="Apparel-items">Outerwear</p>
         <p className="Apparel-items">T-Shirts & Bodysuits</p>

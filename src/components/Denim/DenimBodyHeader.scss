@@ -1,0 +1,71 @@
+.DenimBodyHeader {
+    padding: 1rem 0;
+
+    img {
+        height: auto;
+        max-width: 100%;
+    }
+
+    .btnContainer {
+        padding: 0.5rem 0;
+        display: flex;
+
+        #filterBtn {
+            cursor: pointer;
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            background-color: #424242;
+            color: white;
+            font-size: 13px;
+            font-weight: 400;
+            margin-right: 0.5rem;
+
+            .fas {
+                margin-left: 5px;
+            }
+        }
+
+        #slimBtn {
+            cursor: pointer;
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            background-color: #f5f5f5;
+            color: rgb(169, 162, 162);
+            font-size: 13px;
+            font-weight: 400;
+
+            margin-right: 0.5rem;
+
+            .fas {
+                margin-left: 5px;
+            }
+        }
+
+        #clearBtn {
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            background-color: none;
+            color: rgb(111, 108, 108);
+            font-size: 13px;
+            font-weight: 400;
+            cursor: pointer;
+
+            margin-right: 0.5rem
+        }
+
+
+
+
+
+    }
+}

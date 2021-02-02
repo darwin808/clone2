@@ -1,0 +1,40 @@
+.Denim {
+    height: auto;
+    width: 100%;
+    background-color: white;
+    padding-left: 25em;
+    padding-right: 25em;
+    padding-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    .leftDenim {
+        position: fixed;
+        top: 10rem;
+        left: 25rem;
+    }
+
+    .DenimHeader {
+        display: flex;
+        flex-direction: row;
+        padding: 1rem 0;
+        border-top: 1px solid rgb(181, 175, 175);
+        border-bottom: 1px solid rgb(184, 176, 176);
+        font-size: 13px;
+        color: rgb(94, 88, 88);
+
+        .items {
+            margin: 0 0.5em;
+
+        }
+    }
+
+    .DenimBody {
+        display: flex;
+        flex-direction: column;
+        padding-left: 15rem;
+
+    }
+
+}

@@ -16,6 +16,7 @@ import {
 import WomenReducer from "../Reducers/WomenReducer";
 import DenimTab from "./Navbar_comp/DenimTab";
 import AboutTab from "./Navbar_comp/AboutTab";
+import { useHistory } from "react-router-dom";
 
 function useScroll() {
   const [scroller, setScroll] = useState([window.scrollX, window.scrollY]);
@@ -40,6 +41,7 @@ function useWindow() {
 }
 
 function Navbar2() {
+  const history = useHistory();
   const ShowManTab = useSelector((e) => e.MenReducer);
   const ShowWomanTab = useSelector((e) => e.WomenReducer);
   const ShowDenimTab = useSelector((e) => e.DenimReducer);
@@ -110,11 +112,17 @@ function Navbar2() {
         <p className="leftitems" onMouseEnter={denimHover}>
           Denim {ShowDenimTab && <DenimTab />}
         </p>
-        <p className="leftitems" onMouseEnter={aboutHover}>
-          About {ShowAboutTab && <AboutTab />}{" "}
+        <p
+          onClick={() => history.push("/about")}
+          className="leftitems"
+          onMouseEnter={aboutHover}>
+          About
+          {ShowAboutTab && <AboutTab />}{" "}
         </p>
       </div>
-      <div className="centernav">EVERLANE{width}</div>
+      <div className="centernav" onClick={() => history.push("/")}>
+        EVERLANE
+      </div>
       <div className="rightnav">
         <div className="rightitems">Seach</div>
         <div className="rightitems">Log In</div>

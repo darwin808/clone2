@@ -1,24 +1,31 @@
 import "./App.scss";
-import Navbar1 from "./components/Navbar1";
-import Section1 from "./components/Section1";
-import Section2 from "./components/Section2";
-import Section3 from "./components/Section3";
-import Section4 from "./components/Section4";
-import Section5 from "./components/Section5";
-import S5Foo2 from "./components/Section5_comp/S5Foo2";
-import TopContainer1 from "./components/TopContainer1";
+
+import Home from "./Home";
+import {
+  BrowserRouter as Router,
+  Route,
+  NavLink,
+  BrowserRouter,
+  Switch,
+  useLocation,
+} from "react-router-dom";
+import Denim from "./Pages/Men/Denim";
+import About from "./Pages/About";
+import MainNav from "./components/MainNav/MainNav";
 function App() {
   return (
-    <div className="App">
-      <Navbar1 />
-      <TopContainer1 />
-      <Section1 />
-      <Section2 />
-      <Section3 />
-      <Section4 />
-      <Section5 />
-      <S5Foo2 />
-    </div>
+    <Router>
+      <div className="App">
+        <MainNav />
+        <Switch>
+          <Route path="/" exact render={() => <Home />} />
+
+          <Route path="/about" exact render={() => <About />} />
+
+          <Route path="/men/denim" exact render={() => <Denim />} />
+        </Switch>
+      </div>
+    </Router>
   );
 }
 

@@ -6,7 +6,6 @@ import "./TopContainer1.scss";
 function TopContainer1() {
   return (
     <div className="topcontainer">
-      <Navbar2 />
       <img src={topContainterBG} alt="1231231" className="topContainerBG" />
 
       <div className="topContainer-Center">

@@ -1,0 +1,33 @@
+.DenimCard {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+
+    .headerCard {
+        img {
+            height: auto;
+            max-width: 100%;
+            margin-bottom: 5px;
+        }
+    }
+
+
+    .bodyCard {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        margin-bottom: 5px;
+        color: rgb(60, 58, 58);
+
+    }
+
+    .subtitleCard {
+        margin-bottom: 15px;
+        color: rgb(162, 167, 162);
+    }
+
+    .fooCard {
+        color: rgb(162, 167, 162);
+    }
+}
