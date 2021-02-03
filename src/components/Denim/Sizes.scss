@@ -1,0 +1,19 @@
+.sizesList {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 1rem 1rem;
+    gap: 10px;
+    height: auto;
+    font-size: 13px;
+    color: rgb(179, 177, 177);
+
+    .items {
+        padding: .4rem 5px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgb(243, 243, 243);
+        }
+    }
+
+}

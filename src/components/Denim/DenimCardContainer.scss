@@ -6,6 +6,13 @@
         font-size: 15px;
         margin-bottom: 1.7rem;
         padding-top: 0.5rem;
+        display: flex;
+        flex-direction: column;
+
+        #subheader {
+            margin-top: .5rem;
+            color: gray;
+        }
     }
 
     .bodyContainer {
