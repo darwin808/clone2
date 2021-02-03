@@ -4,7 +4,7 @@ import "./Denim.scss";
 import hero from "../../assets/Men/Denim/head.jpg";
 import LeftDenim from "../../components/Denim/LeftDenim";
 import DenimCardContainer from "../../components/Denim/DenimCardContainer";
-import { useQuery, gql, useMutation } from "@apollo/client";
+import { useQuery, gql, error } from "@apollo/client";
 
 function useScroll() {
   const [scroller, setScroll] = useState([window.scrollX, window.scrollY]);
@@ -17,7 +17,7 @@ function useScroll() {
   return scroller;
 }
 
-function Denim() {
+const Denim = () => {
   /////////////////////*******************GQL************** */
   const getDenimData = gql`
     query MyQuery {
@@ -33,10 +33,13 @@ function Denim() {
   `;
 
   /////////////////*************************************GQL */
+
+  /////////////******************************data */
   const { loading, data } = useQuery(getDenimData);
   const [scrollerX, scrollerY] = useScroll();
   const scrollingDiv = () => {};
-
+  if (loading) return null;
+  if (error) return `Something went wrong: ${error}`;
   return (
     <div className="Denim">
       <section
@@ -53,11 +56,16 @@ function Denim() {
       </section>
       <section className="DenimBody">
         <DenimBodyHeader img={hero} />
-        {loading ? <h1>Loading...</h1> : JSON.stringify(data.denims[0])}
-        <DenimCardContainer header="What's New: The $88 Selvedge Slim Fit Jean" />
+
         <DenimCardContainer
-          header="Best Seller: The Slim 4-Way Stretch Organic Jean | Uniform"
-          subHeader="Made in organic four-way stretch denim, with a fit that's slim through the hip and thigh and has a slightly tapered leg."
+          header={data.denims[0].header}
+          title={data.denims[0].title}
+          subtitle={data.denims[0].subtitle}
+          price={data.denims[0].price}
+        />
+        <DenimCardContainer
+          header={loading ? null : data.denims[1].header}
+          subHeader={loading ? null : data.denims[1].subheader}
         />
         <DenimCardContainer header="What's New: The $88 Selvedge Slim Fit Jean" />
         <DenimCardContainer header="What's New: The $88 Selvedge Slim Fit Jean" />
@@ -72,6 +80,6 @@ function Denim() {
       </section>
     </div>
   );
-}
+};
 
 export default Denim;
