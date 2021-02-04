@@ -1,0 +1,30 @@
+.DenimSlider {
+    height: auto;
+
+
+
+    .SliderBody {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+
+        #leftBtn {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+        }
+
+        #rightBtn {
+            position: absolute;
+            top: 0;
+            left: 5rem;
+        }
+
+        img {
+            height: auto;
+            max-width: 100%;
+        }
+    }
+}

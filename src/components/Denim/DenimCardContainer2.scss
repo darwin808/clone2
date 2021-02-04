@@ -1,0 +1,24 @@
+.DenimCardContainer {
+    display: flex;
+    flex-direction: column;
+
+    .headerContainer {
+        font-size: 15px;
+        margin-bottom: 1.7rem;
+        padding-top: 0.5rem;
+        display: flex;
+        flex-direction: column;
+
+        #subheader {
+            margin-top: .5rem;
+            color: gray;
+        }
+    }
+
+    .bodyContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+
+    }
+}
