@@ -27,10 +27,10 @@ function DenimTab() {
         <p className="Fetured-items">Shop All</p>
       </div>
       <div className="Apparel">
-        <h4 className="ApparelHead">Men</h4>
-        <p className="Apparel-items" onClick={() => history.push("/men/denim")}>
-          Slim
-        </p>
+        <h4 className="ApparelHead" onClick={() => history.push("/men")}>
+          Men
+        </h4>
+        <p className="Apparel-items">Slim</p>
         <p className="Apparel-items">Straight</p>
         <p className="Apparel-items">Athletic</p>
         <p className="Apparel-items">Jacket</p>

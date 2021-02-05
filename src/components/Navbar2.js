@@ -112,10 +112,7 @@ function Navbar2() {
         <p className="leftitems" onMouseEnter={denimHover}>
           Denim {ShowDenimTab && <DenimTab />}
         </p>
-        <p
-          onClick={() => history.push("/about")}
-          className="leftitems"
-          onMouseEnter={aboutHover}>
+        <p className="leftitems" onMouseEnter={aboutHover}>
           About
           {ShowAboutTab && <AboutTab />}{" "}
         </p>

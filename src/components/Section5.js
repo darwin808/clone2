@@ -77,11 +77,11 @@ function Section5() {
         {collection[counter]} {collection[counter + 1]}
         {collection[counter + 2]} {collection[counter + 3]}
       </div>
-
+      {/* 
       <div className="S5Foo1">
         <S5LeftFoo1 />
         <S5RightFoo1 />
-      </div>
+      </div> */}
     </div>
   );
 }

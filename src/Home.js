@@ -25,7 +25,7 @@ function Home() {
         <Section3 />
         <Section4 />
         <Section5 />
-        <S5Foo2 />
+        {/* <S5Foo2 /> */}
       </div>
     </Router>
   );

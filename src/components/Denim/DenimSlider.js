@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import "./DenimSlider.scss";
 import slider1 from "../../assets/Men/Denim/slider1.jpg";
 import slider2 from "../../assets/Men/Denim/slider2.jpg";
@@ -38,9 +38,7 @@ function DenimSlider() {
   ]);
 
   useEffect(() => {
-    setTimeout(() => {
-      counter >= 3 ? setcounter(0) : setcounter(counter + 1);
-    }, 3000);
+    sliderFunc();
   }, [counter]);
 
   const increment = () => {
@@ -50,6 +48,13 @@ function DenimSlider() {
   const decrement = () => {
     counter <= 0 ? setcounter(3) : setcounter(counter - 1);
   };
+
+  const sliderFunc = () => {
+    setTimeout(() => {
+      counter >= 3 ? setcounter(0) : setcounter(counter + 1);
+    }, 1000);
+  };
+
   return (
     <div className="DenimSlider">
       <h1>The Uniform Collection</h1>

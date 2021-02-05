@@ -39,6 +39,28 @@ import skinnyOrganicHover2 from "../../assets/Men/Denim/skinnyOrganicHover2.jpg"
 import skinnyOrganicHover3 from "../../assets/Men/Denim/skinnyOrganicHover3.jpg";
 import DenimSlider from "../../components/Denim/DenimSlider";
 
+import slimFit1 from "../../assets/Men/Denim/slimFit1.jpg";
+import slimFit2 from "../../assets/Men/Denim/slimFit2.jpg";
+import slimFitHover1 from "../../assets/Men/Denim/slimFitHover1.jpg";
+import slimFitHover2 from "../../assets/Men/Denim/slimFitHover2.jpg";
+
+import athleticFit1 from "../../assets/Men/Denim/athleticFit1.jpg";
+import athleticFit2 from "../../assets/Men/Denim/athleticFit2.jpg";
+import athleticFitHover1 from "../../assets/Men/Denim/athleticFitHover1.jpg";
+import athleticFitHover2 from "../../assets/Men/Denim/athleticFitHover2.jpg";
+
+import skinnyFitJean1 from "../../assets/Men/Denim/skinnyFitJean1.jpg";
+import skinnyFitJean2 from "../../assets/Men/Denim/skinnyFitJean2.jpg";
+import skinnyFitJeanHover1 from "../../assets/Men/Denim/skinnyFitJeanHover1.jpg";
+import skinnyFitJeanHover2 from "../../assets/Men/Denim/skinnyFitJeanHover2.jpg";
+import skinnyFitJean3 from "../../assets/Men/Denim/skinnyFitJean3.jpg";
+
+import denimJacket2 from "../../assets/Men/Denim/denimJacket222.jpg";
+import denimJacket1 from "../../assets/Men/Denim/denimJacket111.jpg";
+import denimJacketHover2 from "../../assets/Men/Denim/denimJacketHover2.jpg";
+import denimJacketHover1 from "../../assets/Men/Denim/denimJacketHover1.jpg";
+import LaundryFoo from "../../components/LaundryFoo/LaundryFoo";
+
 function useScroll() {
   const [scroller, setScroll] = useState([window.scrollX, window.scrollY]);
   useEffect(() => {
@@ -152,16 +174,60 @@ const Denim = () => {
         />
 
         <DenimSlider />
-        <DenimCardContainer header="What's New: The $88 Selvedge Slim Fit Jean" />
-        <DenimCardContainer header="What's New: The $88 Selvedge Slim Fit Jean" />
-        <DenimCardContainer header="What's New: The $88 Selvedge Slim Fit Jean" />
-        <DenimCardContainer header="What's New: The $88 Selvedge Slim Fit Jean" />
-        <DenimCardContainer header="What's New: The $88 Selvedge Slim Fit Jean" />
-        <DenimCardContainer header="What's New: The $88 Selvedge Slim Fit Jean" />
-        <DenimCardContainer header="What's New: The $88 Selvedge Slim Fit Jean" />
-        <DenimCardContainer header="What's New: The $88 Selvedge Slim Fit Jean" />
-        <DenimCardContainer header="What's New: The $88 Selvedge Slim Fit Jean" />
-        <DenimCardContainer header="What's New: The $88 Selvedge Slim Fit Jean" />
+
+        <DenimCardContainer
+          subheader={data.denims[5].subheader}
+          header={data.denims[5].header}
+          title={data.denims[5].title}
+          subtitle={data.denims[5].subtitle}
+          price={data.denims[5].price}
+          img1={slimFit1}
+          img1Hover={slimFitHover1}
+          img2={slimFit2}
+          img2Hover={slimFitHover2}
+          img3={""}
+          img3Hover={""}
+        />
+        <DenimCardContainer
+          subheader={data.denims[6].subheader}
+          header={data.denims[6].header}
+          title={data.denims[6].title}
+          subtitle={data.denims[6].subtitle}
+          price={data.denims[6].price}
+          img1={athleticFit1}
+          img1Hover={athleticFitHover1}
+          img2={athleticFit2}
+          img2Hover={athleteHover2}
+          img3={""}
+          img3Hover={""}
+        />
+        <DenimCardContainer2
+          subheader={data.denims[7].subheader}
+          header={data.denims[7].header}
+          title={data.denims[7].title}
+          subtitle={data.denims[7].subtitle}
+          price={data.denims[7].price}
+          img1={skinnyFitJean1}
+          img1Hover={skinnyFitJeanHover1}
+          img2={skinnyFitJean2}
+          img2Hover={skinnyFitJeanHover2}
+          img3={skinnyFitJean3}
+        />
+        <DenimCardContainer
+          subheader={data.denims[8].subheader}
+          header={data.denims[8].header}
+          title={data.denims[8].title}
+          subtitle={data.denims[8].subtitle}
+          price={data.denims[8].price}
+          img1={denimJacket1}
+          img1Hover={denimJacketHover1}
+          img2={denimJacket2}
+          img2Hover={denimJacketHover2}
+          img3={""}
+          img3Hover={""}
+        />
+
+        <LaundryFoo />
       </section>
     </div>
   );

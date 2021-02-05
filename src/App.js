@@ -12,6 +12,7 @@ import {
 import Denim from "./Pages/Men/Denim";
 import About from "./Pages/About";
 import MainNav from "./components/MainNav/MainNav";
+import FooMain from "./components/FooMain";
 function App() {
   return (
     <Router>
@@ -22,8 +23,9 @@ function App() {
 
           <Route path="/about" exact render={() => <About />} />
 
-          <Route path="/men/denim" exact render={() => <Denim />} />
+          <Route path="/men" exact render={() => <Denim />} />
         </Switch>
+        <FooMain />
       </div>
     </Router>
   );
