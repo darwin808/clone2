@@ -2,8 +2,11 @@ import "./DenimCard.scss";
 
 import React, { useState } from "react";
 import Sizes from "./Sizes";
-
-function DenimCard({ img, title, subtitle, price, footer, imgHover }) {
+import { useSelector, useDispatch } from "react-redux";
+import { addItemInCart } from "../../Actions/Actions";
+function DenimCard({ id, img, title, subtitle, price, footer, imgHover }) {
+  const dispatch = useDispatch();
+  const cart = useSelector((e) => e.CartReducer);
   const [ShowHover, setShowHover] = useState(false);
   const [ShowSizes, setShowSizes] = useState(false);
 
@@ -20,6 +23,11 @@ function DenimCard({ img, title, subtitle, price, footer, imgHover }) {
   };
   const hoverv2Off = () => {
     setShowSizes(false);
+  };
+
+  const AddCart = () => {
+    dispatch(addItemInCart({ title, price, img, id }));
+    console.log(cart);
   };
 
   return (
@@ -39,7 +47,7 @@ function DenimCard({ img, title, subtitle, price, footer, imgHover }) {
           <p>+ Quick add</p>
         </div>
 
-        <div onMouseLeave={hoverv2Off} className="SizesList">
+        <div onMouseLeave={hoverv2Off} className="SizesList" onClick={AddCart}>
           {ShowSizes && <Sizes />}
         </div>
       </div>

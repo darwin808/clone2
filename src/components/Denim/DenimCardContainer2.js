@@ -1,14 +1,11 @@
 import React from "react";
 import "./DenimCardContainer2.scss";
-import DenimModel1 from "../../assets/Men/Denim/denim1.jpg";
-import DenimModel2 from "../../assets/Men/Denim/denim2.jpg";
-import HoverModel1 from "../../assets/Men/Denim/hoverModel1.jpg";
-import HoverModel2 from "../../assets/Men/Denim/hoverModel2.jpg";
 import { loading } from "@apollo/client";
 import DenimeCardPicOnly from "./DenimCardPicOnly";
 import DenimCard from "./DenimCard";
 
 function DenimCardContainer({
+  id,
   header,
   subheader,
   price,
@@ -31,6 +28,7 @@ function DenimCardContainer({
       </section>
       <section className="bodyContainer">
         <DenimCard
+          id={id}
           img={img1}
           imgHover={img1Hover}
           title={title}
@@ -39,6 +37,7 @@ function DenimCardContainer({
           footer="2 washes available"
         />
         <DenimCard
+          id={id}
           img={img2}
           imgHover={img2Hover}
           title={title}

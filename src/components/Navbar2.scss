@@ -38,6 +38,12 @@ $font-color2 :#4c4c4b;
         z-index: 99;
     }
 
+    .CartModal {
+        position: absolute;
+        right: 0;
+        top: 3rem;
+    }
+
 
     .centernav {
         display: flex;

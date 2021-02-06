@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useQuery, gql, error } from "@apollo/client";
+import { useDispatch } from "react-redux";
+import { fetchDbData } from "../../Actions/Actions";
 
 import DenimBodyHeader from "../../components/Denim/DenimBodyHeader";
 import "./Denim.scss";
@@ -92,9 +94,15 @@ const Denim = () => {
   /////////////******************************data */
   const { loading, data } = useQuery(getDenimData);
   const [scrollerX, scrollerY] = useScroll();
-  const scrollingDiv = () => {};
-  if (loading) return null;
+  const dispatch = useDispatch();
+  if (loading) {
+    return null;
+  } else {
+    dispatch(fetchDbData(data));
+  }
+
   if (error) return `Something went wrong: ${error}`;
+
   return (
     <div className="Denim">
       <section
@@ -121,6 +129,7 @@ const Denim = () => {
           img1Hover={HoverModel1}
           img2={DenimModel2}
           img2Hover={HoverModel2}
+          id={data.denims[0].id}
         />
         <DenimCardContainer2
           subheader={data.denims[2].subheader}
@@ -133,6 +142,7 @@ const Denim = () => {
           img2={Slim4watModel2}
           img2Hover={Slim4watModel2Hover}
           img3={Slim4wayImg3}
+          id={data.denims[2].id}
         />
         <DenimCardContainer2
           subheader={data.denims[1].subheader}
@@ -145,6 +155,7 @@ const Denim = () => {
           img2={relax4WayModel2}
           img2Hover={relax4WayHover2}
           img3={relax4WayLast}
+          id={data.denims[1].id}
         />
         <DenimCardContainer2
           subheader={data.denims[3].subheader}
@@ -157,6 +168,7 @@ const Denim = () => {
           img2={athleteModel2}
           img2Hover={athleteHover2}
           img3={athleteLast}
+          id={data.denims[3].id}
         />
 
         <DenimCardContainer
@@ -171,6 +183,7 @@ const Denim = () => {
           img2Hover={skinnyOrganicHover2}
           img3={skinnyOrganicModel3}
           img3Hover={skinnyOrganicHover3}
+          id={data.denims[4].id}
         />
 
         <DenimSlider />
@@ -187,6 +200,7 @@ const Denim = () => {
           img2Hover={slimFitHover2}
           img3={""}
           img3Hover={""}
+          id={data.denims[5].id}
         />
         <DenimCardContainer
           subheader={data.denims[6].subheader}
@@ -212,6 +226,7 @@ const Denim = () => {
           img2={skinnyFitJean2}
           img2Hover={skinnyFitJeanHover2}
           img3={skinnyFitJean3}
+          id={data.denims[7].id}
         />
         <DenimCardContainer
           subheader={data.denims[8].subheader}
@@ -225,6 +240,7 @@ const Denim = () => {
           img2Hover={denimJacketHover2}
           img3={""}
           img3Hover={""}
+          id={data.denims[8].id}
         />
 
         <LaundryFoo />
@@ -233,4 +249,4 @@ const Denim = () => {
   );
 };
 
-export default Denim;
+export default React.memo(Denim);

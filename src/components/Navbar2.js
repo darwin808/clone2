@@ -16,6 +16,7 @@ import {
 import WomenReducer from "../Reducers/WomenReducer";
 import DenimTab from "./Navbar_comp/DenimTab";
 import AboutTab from "./Navbar_comp/AboutTab";
+import CartModal from "./Navbar_comp/CartModal/CartModal";
 import { useHistory } from "react-router-dom";
 
 function useScroll() {
@@ -76,10 +77,10 @@ function Navbar2() {
     dispatch(falseAbout());
   };
 
-  const closewomen = () => {
-    setwomen(!women);
-    setsetter(!setter);
-  };
+  // const closewomen = () => {
+  //   setwomen(!women);
+  //   setsetter(!setter);
+  // };
 
   const denimHover = () => {
     dispatch(trueDenim());
@@ -96,6 +97,10 @@ function Navbar2() {
   };
   return (
     <div className={!scrolldown ? "navbar2" : "navbar2 active"}>
+      <div className="CartModal">
+        {" "}
+        <CartModal />
+      </div>
       <div className="leftnav">
         <p className="leftitems" onMouseEnter={womenhover}>
           Women

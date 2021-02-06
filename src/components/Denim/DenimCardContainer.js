@@ -5,6 +5,7 @@ import { loading } from "@apollo/client";
 import DenimCard from "./DenimCard";
 
 function DenimCardContainer({
+  id,
   header,
   subheader,
   price,
@@ -28,6 +29,7 @@ function DenimCardContainer({
       </section>
       <section className="bodyContainer">
         <DenimCard
+          id={id}
           img={img1}
           imgHover={img1Hover}
           title={title}
@@ -36,6 +38,7 @@ function DenimCardContainer({
           footer="2 washes available"
         />
         <DenimCard
+          id={id}
           img={img2}
           imgHover={img2Hover}
           title={title}
@@ -45,6 +48,7 @@ function DenimCardContainer({
         />
         {img3 && (
           <DenimCard
+            id={id}
             img={img3}
             imgHover={img3Hover}
             title={title}

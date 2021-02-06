@@ -5,7 +5,8 @@ import MenReducer from "./MenReducer";
 import WomenReducer from "./WomenReducer";
 import DenimReducer from "./DenimReducer";
 import AboutReducer from "./AboutReducer";
-
+import CartReducer from "./CartReducer";
+import DbDataReducer from "./DbDataReducer";
 const AllReducers = combineReducers({
   NavbarReducer,
   CounterReducer,
@@ -13,6 +14,8 @@ const AllReducers = combineReducers({
   WomenReducer,
   DenimReducer,
   AboutReducer,
+  CartReducer,
+  DbDataReducer,
 });
 
 export default AllReducers;

@@ -61,3 +61,15 @@ export const falseAbout = () => {
     type: "FALSE_ABOUT",
   };
 };
+export const addItemInCart = (data) => {
+  return {
+    type: "ADD_ITEM",
+    payload: data,
+  };
+};
+export const fetchDbData = (data) => {
+  return {
+    type: "FETCH_DATA",
+    payload: data,
+  };
+};

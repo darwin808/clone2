@@ -12,4 +12,4 @@ function MainNav() {
   );
 }
 
-export default MainNav;
+export default React.memo(MainNav);
