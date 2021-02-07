@@ -73,3 +73,9 @@ export const fetchDbData = (data) => {
     payload: data,
   };
 };
+export const deleteItemCart = (id) => {
+  return {
+    type: "DELETE_ITEM",
+    payload: id,
+  };
+};

@@ -7,6 +7,7 @@ import DenimReducer from "./DenimReducer";
 import AboutReducer from "./AboutReducer";
 import CartReducer from "./CartReducer";
 import DbDataReducer from "./DbDataReducer";
+import MiniMenImgReducer from "./MiniMenImgReducer";
 const AllReducers = combineReducers({
   NavbarReducer,
   CounterReducer,
@@ -16,6 +17,7 @@ const AllReducers = combineReducers({
   AboutReducer,
   CartReducer,
   DbDataReducer,
+  MiniMenImgReducer,
 });
 
 export default AllReducers;

@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "./CartModal.scss";
 import { useSelector, useDispatch } from "react-redux";
+import CartModalBody from "./CartModalBody";
 
 function CartModal() {
   const Cart = useSelector((e) => e.CartReducer.cart);
-
+  const MiniImg = useSelector((e) => e.MiniMenImgReducer.MiniMenImg);
   const DbData = useSelector((e) => e.DbDataReducer.DbData[0]);
 
   const item1Id = "d078cc97-f227-4261-bbe9-473ac8be364b";
@@ -20,6 +21,12 @@ function CartModal() {
   const item1Quantity = Cart.filter((e) => e.id === item1Id).length;
   const item2Quantity = Cart.filter((e) => e.id === item2Id).length;
   const item3Quantity = Cart.filter((e) => e.id === item3Id).length;
+  const item4Quantity = Cart.filter((e) => e.id === item4Id).length;
+  const item5Quantity = Cart.filter((e) => e.id === item5Id).length;
+  const item6Quantity = Cart.filter((e) => e.id === item6Id).length;
+  const item7Quantity = Cart.filter((e) => e.id === item7Id).length;
+  const item8Quantity = Cart.filter((e) => e.id === item8Id).length;
+  const item9Quantity = Cart.filter((e) => e.id === item9Id).length;
 
   const arr = [
     {
@@ -27,18 +34,63 @@ function CartModal() {
       quantity: item1Quantity,
       price: 4400,
       id: item1Id,
+      img: MiniImg[0],
     },
     {
       title: "Best Seller: The Slim 4-Way Stretch Organic Jean | Uniform",
       quantity: item2Quantity,
       price: 3600,
       id: item2Id,
+      img: MiniImg[1],
     },
     {
       title: "The Relaxed 4-Way Stretch Organic Jean | Uniform",
       quantity: item3Quantity,
       price: 3600,
       id: item3Id,
+      img: MiniImg[2],
+    },
+    {
+      title: "The Athletic 4-Way Stretch Organic Jean | Uniform",
+      quantity: item4Quantity,
+      price: 4400,
+      id: item4Id,
+      img: MiniImg[3],
+    },
+    {
+      title: "The Skinny 4-Way Stretch Organic Jean | Uniform",
+      quantity: item5Quantity,
+      price: 3600,
+      id: item5Id,
+      img: MiniImg[4],
+    },
+    {
+      title: "The Slim Fit Jean",
+      quantity: item6Quantity,
+      price: 3600,
+      id: item6Id,
+      img: MiniImg[5],
+    },
+    {
+      title: "The Athletic Fit Jean",
+      quantity: item7Quantity,
+      price: 4400,
+      id: item7Id,
+      img: MiniImg[6],
+    },
+    {
+      title: "The Skinny Fit Jean",
+      quantity: item8Quantity,
+      price: 3600,
+      id: item8Id,
+      img: MiniImg[7],
+    },
+    {
+      title: "The Denim Jacket",
+      quantity: item9Quantity,
+      price: 3600,
+      id: item9Id,
+      img: MiniImg[8],
     },
   ];
   return (
@@ -47,11 +99,19 @@ function CartModal() {
         <p className="header">Your Bag</p>
       </div>
       <div className="bodyModalContainer">
-        {arr.map((e) => (
-          <div key={e.id}>
-            {e.title} - {e.quantity}
-          </div>
-        ))}
+        {Cart.length > 0 ? (
+          arr.map((e) => (
+            <CartModalBody
+              id={e.id}
+              title={e.title}
+              quantity={e.quantity}
+              price={e.price}
+              img={e.img}
+            />
+          ))
+        ) : (
+          <p>You have no items in your bag.</p>
+        )}
       </div>
       <div className="fooModal">
         <p className="para1">
@@ -64,4 +124,4 @@ function CartModal() {
   );
 }
 
-export default CartModal;
+export default React.memo(CartModal);
