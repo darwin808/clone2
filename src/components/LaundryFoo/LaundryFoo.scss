@@ -1,0 +1,26 @@
+.LaundryFoo {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    .header {
+        font-size: 15px;
+        color: rgb(189, 189, 189);
+        margin-bottom: 1rem;
+    }
+
+    img {
+        height: auto;
+        max-width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .foo {
+        font-size: 13px;
+        color: rgb(189, 189, 189);
+
+    }
+}

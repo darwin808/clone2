@@ -1,0 +1,84 @@
+.DenimCard {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    position: relative;
+    margin-bottom: 4rem;
+
+    .circle {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        top: 0.5rem;
+        right: 0.5rem;
+        background-color: white;
+        height: 2rem;
+        width: 2rem;
+        border-radius: 50%;
+        cursor: pointer;
+        color: rgb(197, 184, 184);
+        z-index: 4;
+
+    }
+
+    .headerCard {
+        position: relative;
+
+        .SizesList {
+            position: absolute;
+            bottom: 0;
+            margin: 1rem 1rem;
+            width: 90%;
+            display: flex;
+            justify-content: center;
+            z-index: 5;
+            background-color: white;
+
+        }
+
+        img {
+            height: auto;
+            max-width: 100%;
+            margin-bottom: 5px;
+            z-index: 1;
+        }
+
+        .sizes {
+            cursor: pointer;
+            color: gray;
+            font-size: 13px;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            bottom: 0;
+            margin: 1rem 1rem;
+            background-color: white;
+            padding: 1rem 1rem;
+            z-index: 3;
+            width: 90%;
+        }
+    }
+
+
+    .bodyCard {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        margin-bottom: 5px;
+        color: rgb(60, 58, 58);
+
+    }
+
+    .subtitleCard {
+        margin-bottom: 15px;
+        color: rgb(162, 167, 162);
+    }
+
+    .fooCard {
+        color: rgb(162, 167, 162);
+        font-style: italic;
+    }
+}

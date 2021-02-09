@@ -1,20 +1,12 @@
 import "./App.scss";
-import Navbar1 from "./components/Navbar1";
 import Section1 from "./components/Section1";
 import Section2 from "./components/Section2";
 import Section3 from "./components/Section3";
 import Section4 from "./components/Section4";
 import Section5 from "./components/Section5";
-import S5Foo2 from "./components/Section5_comp/S5Foo2";
+import FooMain from "../src/components/FooMain";
 import TopContainer1 from "./components/TopContainer1";
-import {
-  BrowserRouter as Router,
-  Route,
-  NavLink,
-  BrowserRouter,
-  Switch,
-  useLocation,
-} from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 function Home() {
   return (
     <Router>
@@ -25,7 +17,8 @@ function Home() {
         <Section3 />
         <Section4 />
         <Section5 />
-        <S5Foo2 />
+        {/* <S5Foo2 /> */}
+        <FooMain />
       </div>
     </Router>
   );

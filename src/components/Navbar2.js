@@ -13,10 +13,11 @@ import {
   trueAbout,
   falseAbout,
 } from "../Actions/Actions";
-import WomenReducer from "../Reducers/WomenReducer";
 import DenimTab from "./Navbar_comp/DenimTab";
 import AboutTab from "./Navbar_comp/AboutTab";
+import CartModal from "./Navbar_comp/CartModal/CartModal";
 import { useHistory } from "react-router-dom";
+import CartReducer from "../Reducers/CartReducer";
 
 function useScroll() {
   const [scroller, setScroll] = useState([window.scrollX, window.scrollY]);
@@ -39,7 +40,7 @@ function useWindow() {
   }, []);
   return size;
 }
-
+//////////////////////////////////////////////////////////////////////////////////////
 function Navbar2() {
   const history = useHistory();
   const ShowManTab = useSelector((e) => e.MenReducer);
@@ -47,13 +48,11 @@ function Navbar2() {
   const ShowDenimTab = useSelector((e) => e.DenimReducer);
   const ShowAboutTab = useSelector((e) => e.AboutReducer);
   const dispatch = useDispatch();
-  const [width, height] = useWindow();
+  const cart = useSelector((e) => e.CartReducer.cart);
+  const [showCartModal, setshowCartModal] = useState(false);
   const [scrollerX, scrollerY] = useScroll();
   const [scrolly, setScrolly] = useState("");
-  const [setter, setsetter] = useState(true);
   const [scrolldown, setscrolldown] = useState(false);
-  const [women, setwomen] = useState(false);
-  const [modalMen, setmodalMen] = useState(false);
 
   const changebg = useMemo(() => {
     setScrolly(window.scrollY);
@@ -76,10 +75,10 @@ function Navbar2() {
     dispatch(falseAbout());
   };
 
-  const closewomen = () => {
-    setwomen(!women);
-    setsetter(!setter);
-  };
+  // const closewomen = () => {
+  //   setwomen(!women);
+  //   setsetter(!setter);
+  // };
 
   const denimHover = () => {
     dispatch(trueDenim());
@@ -94,8 +93,33 @@ function Navbar2() {
     dispatch(falseMen());
     dispatch(falseWomen());
   };
+
+  const openCartModal = () => {
+    setshowCartModal(true);
+  };
+
+  const closeCartModal = () => {
+    setshowCartModal(false);
+  };
+
+  useEffect(() => {
+    console.log(window.location.href);
+  });
   return (
-    <div className={!scrolldown ? "navbar2" : "navbar2 active"}>
+    <div
+      className={!scrolldown ? "navbar2" : "navbar2 active"}
+      style={{
+        backgroundColor: `${
+          window.location.href === "http://localhost:3000/men" ? "none" : "none"
+        }`,
+        color: "grey",
+      }}>
+      {showCartModal && (
+        <div className="CartModal" onMouseLeave={closeCartModal}>
+          <CartModal />
+        </div>
+      )}
+
       <div className="leftnav">
         <p className="leftitems" onMouseEnter={womenhover}>
           Women
@@ -112,10 +136,7 @@ function Navbar2() {
         <p className="leftitems" onMouseEnter={denimHover}>
           Denim {ShowDenimTab && <DenimTab />}
         </p>
-        <p
-          onClick={() => history.push("/about")}
-          className="leftitems"
-          onMouseEnter={aboutHover}>
+        <p className="leftitems" onMouseEnter={aboutHover}>
           About
           {ShowAboutTab && <AboutTab />}{" "}
         </p>
@@ -127,12 +148,19 @@ function Navbar2() {
         <div className="rightitems">Seach</div>
         <div className="rightitems">Log In</div>
         <div className="rightitems">Sign Up</div>
-        <div className="rightitems">
-          <i class="fas fa-shopping-cart fa-lg"></i>
+        <div className="rightitems" id="cartIco">
+          <i
+            onMouseEnter={openCartModal}
+            class="fas fa-shopping-cart fa-lg"
+            id="cartIcon"></i>
+
+          {cart.length > 0 ? (
+            <div className="cartItems">{cart.length}</div>
+          ) : null}
         </div>
       </div>
     </div>
   );
 }
 
-export default Navbar2;
+export default React.memo(Navbar2);
