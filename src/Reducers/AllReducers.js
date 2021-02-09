@@ -8,8 +8,11 @@ import AboutReducer from "./AboutReducer";
 import CartReducer from "./CartReducer";
 import DbDataReducer from "./DbDataReducer";
 import MiniMenImgReducer from "./MiniMenImgReducer";
+import CheckOutCartReducer from "./CheckoutCartReducer";
+import SubtotalReducer from "./SubtotalReducer";
 const AllReducers = combineReducers({
   NavbarReducer,
+  SubtotalReducer,
   CounterReducer,
   MenReducer,
   WomenReducer,
@@ -18,6 +21,7 @@ const AllReducers = combineReducers({
   CartReducer,
   DbDataReducer,
   MiniMenImgReducer,
+  CheckOutCartReducer,
 });
 
 export default AllReducers;

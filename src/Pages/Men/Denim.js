@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useQuery, gql, error } from "@apollo/client";
 import { useDispatch } from "react-redux";
-import { fetchDbData } from "../../Actions/Actions";
+import { fetchDbData, setSubtotal } from "../../Actions/Actions";
 
 import DenimBodyHeader from "../../components/Denim/DenimBodyHeader";
 import "./Denim.scss";
@@ -62,6 +62,7 @@ import denimJacket1 from "../../assets/Men/Denim/denimJacket111.jpg";
 import denimJacketHover2 from "../../assets/Men/Denim/denimJacketHover2.jpg";
 import denimJacketHover1 from "../../assets/Men/Denim/denimJacketHover1.jpg";
 import LaundryFoo from "../../components/LaundryFoo/LaundryFoo";
+import FooMain from "../../components/FooMain";
 
 function useScroll() {
   const [scroller, setScroll] = useState([window.scrollX, window.scrollY]);
@@ -75,6 +76,9 @@ function useScroll() {
 }
 
 const Denim = () => {
+  useEffect(() => {
+    dispatch(setSubtotal(0));
+  }, []);
   /////////////////////*******************GQL************** */
   const getDenimData = gql`
     query MyQuery {
@@ -95,6 +99,7 @@ const Denim = () => {
   const { loading, data } = useQuery(getDenimData);
   const [scrollerX, scrollerY] = useScroll();
   const dispatch = useDispatch();
+
   if (loading) {
     return null;
   } else {
@@ -104,148 +109,151 @@ const Denim = () => {
   if (error) return `Something went wrong: ${error}`;
 
   return (
-    <div className="Denim">
-      <section
-        className="leftDenim"
-        style={{ top: `${scrollerY > 90 ? "4rem" : "10rem"}` }}>
-        <LeftDenim />
-      </section>
-      <section className="DenimHeader">
-        <p className="items">Home</p>
-        <p className="items">/</p>
-        <p className="items">Men</p>
-        <p className="items">/</p>
-        <p className="items">Denim</p>
-      </section>
-      <section className="DenimBody">
-        <DenimBodyHeader img={hero} />
-        <DenimCardContainer
-          subheader=""
-          header={data.denims[0].header}
-          title={data.denims[0].title}
-          subtitle={data.denims[0].subtitle}
-          price={data.denims[0].price}
-          img1={DenimModel1}
-          img1Hover={HoverModel1}
-          img2={DenimModel2}
-          img2Hover={HoverModel2}
-          id={data.denims[0].id}
-        />
-        <DenimCardContainer2
-          subheader={data.denims[2].subheader}
-          header={data.denims[2].header}
-          title={data.denims[2].title}
-          subtitle={data.denims[2].subtitle}
-          price={data.denims[2].price}
-          img1={Slim4watModel1}
-          img1Hover={Slim4watModel1Hover}
-          img2={Slim4watModel2}
-          img2Hover={Slim4watModel2Hover}
-          img3={Slim4wayImg3}
-          id={data.denims[2].id}
-        />
-        <DenimCardContainer2
-          subheader={data.denims[1].subheader}
-          header={data.denims[1].header}
-          title={data.denims[1].title}
-          subtitle={data.denims[1].subtitle}
-          price={data.denims[1].price}
-          img1={relax4WayModel1}
-          img1Hover={relax4WayHover1}
-          img2={relax4WayModel2}
-          img2Hover={relax4WayHover2}
-          img3={relax4WayLast}
-          id={data.denims[1].id}
-        />
-        <DenimCardContainer2
-          subheader={data.denims[3].subheader}
-          header={data.denims[3].header}
-          title={data.denims[3].title}
-          subtitle={data.denims[3].subtitle}
-          price={data.denims[3].price}
-          img1={athleteModel1}
-          img1Hover={athleteHover1}
-          img2={athleteModel2}
-          img2Hover={athleteHover2}
-          img3={athleteLast}
-          id={data.denims[3].id}
-        />
+    <>
+      <div className="Denim">
+        <section
+          className="leftDenim"
+          style={{ top: `${scrollerY > 90 ? "4rem" : "10rem"}` }}>
+          <LeftDenim />
+        </section>
+        <section className="DenimHeader">
+          <p className="items">Home</p>
+          <p className="items">/</p>
+          <p className="items">Men</p>
+          <p className="items">/</p>
+          <p className="items">Denim</p>
+        </section>
+        <section className="DenimBody">
+          <DenimBodyHeader img={hero} />
+          <DenimCardContainer
+            subheader=""
+            header={data.denims[0].header}
+            title={data.denims[0].title}
+            subtitle={data.denims[0].subtitle}
+            price={data.denims[0].price}
+            img1={DenimModel1}
+            img1Hover={HoverModel1}
+            img2={DenimModel2}
+            img2Hover={HoverModel2}
+            id={data.denims[0].id}
+          />
+          <DenimCardContainer2
+            subheader={data.denims[2].subheader}
+            header={data.denims[2].header}
+            title={data.denims[2].title}
+            subtitle={data.denims[2].subtitle}
+            price={data.denims[2].price}
+            img1={Slim4watModel1}
+            img1Hover={Slim4watModel1Hover}
+            img2={Slim4watModel2}
+            img2Hover={Slim4watModel2Hover}
+            img3={Slim4wayImg3}
+            id={data.denims[2].id}
+          />
+          <DenimCardContainer2
+            subheader={data.denims[1].subheader}
+            header={data.denims[1].header}
+            title={data.denims[1].title}
+            subtitle={data.denims[1].subtitle}
+            price={data.denims[1].price}
+            img1={relax4WayModel1}
+            img1Hover={relax4WayHover1}
+            img2={relax4WayModel2}
+            img2Hover={relax4WayHover2}
+            img3={relax4WayLast}
+            id={data.denims[1].id}
+          />
+          <DenimCardContainer2
+            subheader={data.denims[3].subheader}
+            header={data.denims[3].header}
+            title={data.denims[3].title}
+            subtitle={data.denims[3].subtitle}
+            price={data.denims[3].price}
+            img1={athleteModel1}
+            img1Hover={athleteHover1}
+            img2={athleteModel2}
+            img2Hover={athleteHover2}
+            img3={athleteLast}
+            id={data.denims[3].id}
+          />
 
-        <DenimCardContainer
-          subheader={data.denims[4].subheader}
-          header={data.denims[4].header}
-          title={data.denims[4].title}
-          subtitle={data.denims[4].subtitle}
-          price={data.denims[4].price}
-          img1={skinnyOrganicModel1}
-          img1Hover={skinnyOrganicHover1}
-          img2={skinnyOrganicModel2}
-          img2Hover={skinnyOrganicHover2}
-          img3={skinnyOrganicModel3}
-          img3Hover={skinnyOrganicHover3}
-          id={data.denims[4].id}
-        />
+          <DenimCardContainer
+            subheader={data.denims[4].subheader}
+            header={data.denims[4].header}
+            title={data.denims[4].title}
+            subtitle={data.denims[4].subtitle}
+            price={data.denims[4].price}
+            img1={skinnyOrganicModel1}
+            img1Hover={skinnyOrganicHover1}
+            img2={skinnyOrganicModel2}
+            img2Hover={skinnyOrganicHover2}
+            img3={skinnyOrganicModel3}
+            img3Hover={skinnyOrganicHover3}
+            id={data.denims[4].id}
+          />
 
-        <DenimSlider />
+          <DenimSlider />
 
-        <DenimCardContainer
-          subheader={data.denims[5].subheader}
-          header={data.denims[5].header}
-          title={data.denims[5].title}
-          subtitle={data.denims[5].subtitle}
-          price={data.denims[5].price}
-          img1={slimFit1}
-          img1Hover={slimFitHover1}
-          img2={slimFit2}
-          img2Hover={slimFitHover2}
-          img3={""}
-          img3Hover={""}
-          id={data.denims[5].id}
-        />
-        <DenimCardContainer
-          subheader={data.denims[6].subheader}
-          header={data.denims[6].header}
-          title={data.denims[6].title}
-          subtitle={data.denims[6].subtitle}
-          price={data.denims[6].price}
-          img1={athleticFit1}
-          img1Hover={athleticFitHover1}
-          img2={athleticFit2}
-          img2Hover={athleteHover2}
-          img3={""}
-          img3Hover={""}
-        />
-        <DenimCardContainer2
-          subheader={data.denims[7].subheader}
-          header={data.denims[7].header}
-          title={data.denims[7].title}
-          subtitle={data.denims[7].subtitle}
-          price={data.denims[7].price}
-          img1={skinnyFitJean1}
-          img1Hover={skinnyFitJeanHover1}
-          img2={skinnyFitJean2}
-          img2Hover={skinnyFitJeanHover2}
-          img3={skinnyFitJean3}
-          id={data.denims[7].id}
-        />
-        <DenimCardContainer
-          subheader={data.denims[8].subheader}
-          header={data.denims[8].header}
-          title={data.denims[8].title}
-          subtitle={data.denims[8].subtitle}
-          price={data.denims[8].price}
-          img1={denimJacket1}
-          img1Hover={denimJacketHover1}
-          img2={denimJacket2}
-          img2Hover={denimJacketHover2}
-          img3={""}
-          img3Hover={""}
-          id={data.denims[8].id}
-        />
+          <DenimCardContainer
+            subheader={data.denims[5].subheader}
+            header={data.denims[5].header}
+            title={data.denims[5].title}
+            subtitle={data.denims[5].subtitle}
+            price={data.denims[5].price}
+            img1={slimFit1}
+            img1Hover={slimFitHover1}
+            img2={slimFit2}
+            img2Hover={slimFitHover2}
+            img3={""}
+            img3Hover={""}
+            id={data.denims[5].id}
+          />
+          <DenimCardContainer
+            subheader={data.denims[6].subheader}
+            header={data.denims[6].header}
+            title={data.denims[6].title}
+            subtitle={data.denims[6].subtitle}
+            price={data.denims[6].price}
+            img1={athleticFit1}
+            img1Hover={athleticFitHover1}
+            img2={athleticFit2}
+            img2Hover={athleteHover2}
+            img3={""}
+            img3Hover={""}
+          />
+          <DenimCardContainer2
+            subheader={data.denims[7].subheader}
+            header={data.denims[7].header}
+            title={data.denims[7].title}
+            subtitle={data.denims[7].subtitle}
+            price={data.denims[7].price}
+            img1={skinnyFitJean1}
+            img1Hover={skinnyFitJeanHover1}
+            img2={skinnyFitJean2}
+            img2Hover={skinnyFitJeanHover2}
+            img3={skinnyFitJean3}
+            id={data.denims[7].id}
+          />
+          <DenimCardContainer
+            subheader={data.denims[8].subheader}
+            header={data.denims[8].header}
+            title={data.denims[8].title}
+            subtitle={data.denims[8].subtitle}
+            price={data.denims[8].price}
+            img1={denimJacket1}
+            img1Hover={denimJacketHover1}
+            img2={denimJacket2}
+            img2Hover={denimJacketHover2}
+            img3={""}
+            img3Hover={""}
+            id={data.denims[8].id}
+          />
 
-        <LaundryFoo />
-      </section>
-    </div>
+          <LaundryFoo />
+        </section>
+      </div>
+      <FooMain />
+    </>
   );
 };
 

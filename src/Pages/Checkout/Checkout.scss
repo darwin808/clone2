@@ -1,0 +1,106 @@
+.Checkout {
+    display: flex;
+    flex-direction: column;
+    padding: 7rem 25rem;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    color: rgb(87, 84, 84);
+
+
+    .topCheckOut {
+        display: flex;
+        flex-direction: row;
+        background-color: none;
+        width: 100%;
+        justify-content: center;
+        padding-bottom: 2rem;
+
+
+
+
+
+
+        .leftCheckout {
+            display: flex;
+            flex-direction: column;
+            flex: 60%;
+            background-color: none;
+            margin: 0 5rem;
+
+
+            .headerLeft {
+                padding: 1rem 0rem;
+                margin: 0 1rem;
+                border-bottom: 1px solid rgb(201, 198, 198);
+                margin-bottom: .5rem;
+            }
+
+            .itemsBodyLeft {
+                overflow-y: auto;
+            }
+        }
+
+        .rightCheckout {
+            display: flex;
+            flex-direction: column;
+
+            flex: 40%;
+            margin-right: 6rem;
+
+            .rightheader {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                align-items: center;
+                padding: 1.3rem 1.2rem;
+                border-bottom: 1px solid rgb(230, 230, 230);
+                color: black;
+                font-size: 15px;
+                background-color: #f7f7f8;
+            }
+
+            .items {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 1.3rem 1.2rem;
+                border-bottom: 1px solid rgb(233, 233, 233);
+                background-color: #f7f7f8;
+
+            }
+
+            #total {
+                color: black;
+                font-size: 14px;
+            }
+
+            .itemDesc {
+                padding: 1.3rem 1.2rem;
+                display: flex;
+                text-align: center;
+                background-color: #f7f7f8;
+                text-align: left;
+
+            }
+
+            .btn {
+                background-color: #4b6434;
+                flex-direction: column;
+                color: white;
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                margin-top: .7rem;
+                height: 2.5rem;
+                width: 100%;
+                font-size: 14px;
+            }
+        }
+    }
+
+    .mid {
+        background-color: green;
+    }
+}

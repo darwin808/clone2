@@ -2,12 +2,16 @@ import React, { useState } from "react";
 import "./CartModal.scss";
 import { useSelector, useDispatch } from "react-redux";
 import CartModalBody from "./CartModalBody";
+import { history, useHistory } from "react-router-dom";
+import { addCheckoutCart } from "../../../Actions/Actions";
 
 function CartModal() {
+  const dispatch = useDispatch();
   const Cart = useSelector((e) => e.CartReducer.cart);
   const MiniImg = useSelector((e) => e.MiniMenImgReducer.MiniMenImg);
   const DbData = useSelector((e) => e.DbDataReducer.DbData[0]);
-
+  const history = useHistory();
+  const CheckOutCart1 = useSelector((e) => e.CheckOutCartReducer.CheckOutCart);
   const item1Id = "d078cc97-f227-4261-bbe9-473ac8be364b";
   const item2Id = "536398eb-3536-43b0-ac19-bdcaf94f7ffa";
   const item3Id = "3293dfc5-3ccb-478c-8671-e90cfbd52c78";
@@ -28,7 +32,11 @@ function CartModal() {
   const item8Quantity = Cart.filter((e) => e.id === item8Id).length;
   const item9Quantity = Cart.filter((e) => e.id === item9Id).length;
 
-  const arr = [
+  const checkOutCart = () => {
+    history.push("/checkout");
+    dispatch(addCheckoutCart(checkOut));
+  };
+  const checkOut = [
     {
       title: "The Selvedge Slim Fit Jean",
       quantity: item1Quantity,
@@ -99,8 +107,8 @@ function CartModal() {
         <p className="header">Your Bag</p>
       </div>
       <div className="bodyModalContainer">
-        {Cart.length > 0 ? (
-          arr.map((e) => (
+        {checkOut.length > 0 ? (
+          checkOut.map((e) => (
             <CartModalBody
               id={e.id}
               title={e.title}
@@ -118,7 +126,9 @@ function CartModal() {
           Sign up your 10% off your first order. Valid within
         </p>
         <p className="para2">two days of signup</p>
-        <div className="btn">Continue to Checkout</div>
+        <div className="btn" onClick={checkOutCart}>
+          Continue to Checkout
+        </div>
       </div>
     </div>
   );

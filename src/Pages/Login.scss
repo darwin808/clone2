@@ -1,0 +1,181 @@
+.Login{
+    padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: 13px;
+    padding-right: 45rem;
+    padding-left: 45rem;
+    .topHeader{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap:8rem;
+
+      .item1Container{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          text-align: center;
+          align-items: center;font-size: 11px;
+           .item1{
+            height: 23px;
+            width: 23px;
+            background-color:rgb(54, 54, 54);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-radius: 50%;
+         
+        }
+
+        .accnt{
+            
+            color: rgb(180, 180, 180);
+        }
+
+
+      }
+        
+      .item4Container,.item2Container,.item3Container{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          text-align: center;
+          align-items: center;font-size: 11px;
+           .item4,.item2,.item3{
+            height: 23px;
+            width: 23px;
+            background-color:rgb(201, 201, 201);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-radius: 50%;
+         
+        }
+
+        .accnt,.shipping,.billing,.review{
+            
+            color: rgb(180, 180, 180);
+        }
+
+        
+      }
+        
+       
+
+       
+    }
+    .cardLogin{
+        display: flex;
+        flex-direction: column;
+        padding-top: 3rem;
+        padding-bottom: 5rem;
+
+        .para1Login,.para2Login{
+            color: rgb(76, 76, 76);
+            font-size: 20px;
+            margin-bottom: 0.5rem;
+        }
+
+        .inputLogin{
+            color: rgb(151, 151, 151);
+            padding-top: 4rem;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            p{
+                font-size: 11px;
+                margin-bottom: 5px;
+                letter-spacing: 1px;
+            }
+            input{
+                height: 2.5rem;
+                border: 1px solid rgb(228, 228, 228);
+                padding: 1rem;
+                font-size: 14px;
+                color: rgb(228,228,228);
+
+                 
+            }
+
+
+        }
+
+        .submitLogin{
+            height: 2.8rem;
+            display: flex;
+            flex-direction: column;
+            background-color:rgb(76,76,75);
+            color: white;
+            margin-top: 15px;
+            justify-content: center;
+            font-weight: 700;
+            letter-spacing: 2px;
+            cursor: pointer;
+
+            &:hover{
+                background-color: black;
+            }
+        }
+
+        .para3{
+            color: rgb(76,76,76);
+            font-size: 14px;
+            padding-top: 1.3rem;
+            padding-bottom: 1.3rem;
+            font-weight: 400;
+        }
+
+        .socLinkBtn{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            text-align: center;
+            align-items: center;
+            
+            padding: .5rem .5rem;
+
+            .googleLogin,.fbLogin{
+                height: 3rem;
+                width: auto;
+                background-color: rgb(228, 228, 228);
+                display: flex;
+                flex-direction: row;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                padding: 1rem 2rem;
+                cursor: pointer;
+
+                &:hover{
+                    background-color: rgb(189, 188, 188);
+                }
+
+                img{
+                    height: 100%;
+                    max-width: 100%;
+                    margin-right: 10px;
+                }
+            }
+        }
+
+        .para4,.para5{
+            padding-top: 1rem;
+            color: rgb(151, 149, 149);
+            font-weight: 400;
+           font-size: 13px;
+
+
+           u{
+               color: rgb(85, 85, 85);
+               cursor: pointer;
+           }
+        }
+
+        
+    }
+}

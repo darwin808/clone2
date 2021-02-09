@@ -1,10 +1,11 @@
 import "./CartModalBody.scss";
 
 import React, { useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { deleteItemCart } from "../../../Actions/Actions";
+import { useDispatch, useSelector } from "react-redux";
+import { deleteItemCart, setSubtotal } from "../../../Actions/Actions";
 
 function CartModalBody({ id, title, price, quantity, img, setQty }) {
+  const Subtotal = useSelector((e) => e.SubtotalReducer);
   const dispatch = useDispatch();
   useEffect(() => {
     setitemQuantity(quantity);
@@ -14,6 +15,8 @@ function CartModalBody({ id, title, price, quantity, img, setQty }) {
     setitemQuantity(0);
     console.log(id);
     dispatch(deleteItemCart(id));
+    dispatch(setSubtotal(0));
+    console.log(Subtotal.state);
   };
   const minusItem = () => {
     setitemQuantity(itemQuantity - 1);

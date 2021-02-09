@@ -9,13 +9,20 @@
     .top {
         display: flex;
         flex-direction: row;
+        justify-content: center;
 
         .left {
             flex: 30%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
 
             img {
                 max-width: 100%;
                 height: auto;
+
             }
         }
 
@@ -70,7 +77,8 @@
                 #qty {
                     margin: 0 7px;
                 }
-                h4{
+
+                h4 {
                     cursor: pointer;
                 }
             }

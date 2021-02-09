@@ -14,6 +14,7 @@ const CartReducer = (state = initialState, action) => {
         ...state,
         cart: newarr,
       };
+
     default:
       return state;
   }

@@ -76,6 +76,20 @@ export const fetchDbData = (data) => {
 export const deleteItemCart = (id) => {
   return {
     type: "DELETE_ITEM",
+
     payload: id,
+  };
+};
+
+export const addCheckoutCart = (data) => {
+  return {
+    type: "ADD_CHECKOUTCART",
+    payload: data,
+  };
+};
+export const setSubtotal = (data) => {
+  return {
+    type: "SET_SUBTOTAL",
+    payload: data,
   };
 };
