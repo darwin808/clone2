@@ -113,7 +113,8 @@ function Navbar2() {
           window.location.href === "http://localhost:3000/men" ? "none" : "none"
         }`,
         color: "grey",
-      }}>
+      }}
+    >
       {showCartModal && (
         <div className="CartModal" onMouseLeave={closeCartModal}>
           <CartModal />
@@ -121,7 +122,11 @@ function Navbar2() {
       )}
 
       <div className="leftnav">
-        <p className="leftitems" onMouseEnter={womenhover}>
+        <p
+          className="leftitems"
+          onMouseEnter={womenhover}
+          onClick={() => history.push("/women")}
+        >
           Women
           {ShowWomanTab && (
             <div className="WomenChild">
@@ -152,7 +157,8 @@ function Navbar2() {
           <i
             onMouseEnter={openCartModal}
             class="fas fa-shopping-cart fa-lg"
-            id="cartIcon"></i>
+            id="cartIcon"
+          ></i>
 
           {cart.length > 0 ? (
             <div className="cartItems">{cart.length}</div>

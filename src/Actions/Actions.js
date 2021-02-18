@@ -93,3 +93,10 @@ export const setSubtotal = (data) => {
     payload: data,
   };
 };
+
+export const addwomendenim = (data) => {
+  return {
+    type: "ADD_WOMAN_DENIM",
+    payload: data,
+  };
+};

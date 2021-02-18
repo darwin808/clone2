@@ -10,7 +10,9 @@ import DbDataReducer from "./DbDataReducer";
 import MiniMenImgReducer from "./MiniMenImgReducer";
 import CheckOutCartReducer from "./CheckoutCartReducer";
 import SubtotalReducer from "./SubtotalReducer";
+import WomanDenimReducer from "./WomenDenimReducer";
 const AllReducers = combineReducers({
+  WomanDenimReducer,
   NavbarReducer,
   SubtotalReducer,
   CounterReducer,

@@ -17,6 +17,9 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
   link: new HttpLink({
     uri: "https://factual-falcon-21.hasura.app/v1/graphql",
+    headers: {
+      "x-hasura-admin-secret": "v8AdXLfaZMECG94",
+    },
   }),
 });
 const store = createStore(Allreducers);
